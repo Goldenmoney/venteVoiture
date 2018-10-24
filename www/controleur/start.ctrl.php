@@ -10,8 +10,5 @@ if(!isset($_GET["catChoisie"]) || $_GET["catChoisie"]=="toutes"){
   $garage = $vectVoiture->getFctCat($cateChoisie);
 }
 
-
-
 include('../vue/index.php');
-
   ?>

@@ -84,7 +84,10 @@
             <label for="mail">E-mail :</label>
             <input type="email" id="mail" name="user_email" />
           </div>
-
+      <div>
+        <label for="mot_de_passe">Mot de passe :</label>
+          <input name="mot_de_passe" type="password" id="mot_de_passe" size="20" />
+        </div>
           <button type="submit" name="compte" value="monCompte" class="button">S'inscrire !</button>
         </form>
 
