@@ -38,7 +38,7 @@ class VoitureDAO {
 
   }
 
-  public function get (int $id):Voiture{
+  public function get(int $id):Voiture{
     $sql="SELECT * FROM voiture WHERE identifier=$id";
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");

@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <style media="screen">
-      img{
-        width: 200px;
-        height: 200px;
-      }
-    </style>
-    <title>Garage</title>
-  </head>
-  <body>
-    <h1>Garage</h1>
-    <?php
+<?php
     require_once("Voiture.class.php");
     $m = new VoitureDAO;
 
@@ -25,6 +11,4 @@
       echo " Ainsi que son prix : ".$prix;
       echo"<hr>";
     }
-     ?>
-  </body>
-</html>
+?>
