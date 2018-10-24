@@ -11,27 +11,44 @@
       <h1>Vente voiture</h1>
     </a>
     <div class="choix">
-      <p>ici on met tout les choix possible</p>
+    <FORM>
+    <SELECT name="nom" size="1">
+      <OPTION selected>Toutes
+      <?php
+        foreach ($vectCat as $key => $value) {
+          echo "<OPTION>".$value[0];
+        }
+        ?>
+    </SELECT>
+    </FORM>
     </div>
   </div>
   <div class="contenu">
-    <?php foreach ($variable as $key => $value): ?>
-      echo "<div class=\"annonce\">";
-      $image=$i.".jpg";
-      echo "<div class=\"image\">";
-      echo "<img src=\"../vue/design/images/$image\" alt=\"$nom\">";
-      echo"</div>";
-      echo "<div class=\"info\">";
-      echo "<p class=\"bold\">";
-      echo $nom;
-      echo "</p>";
-      echo "<p>";
-      echo " Ainsi que son prix : ".$prix;
-      echo "</p>";
-      echo"</div>";
-      echo"</div>";
-      echo"<hr>";
-    <?php endforeach; ?>
+    <?php
+      foreach ($garage as $key => $value){
+        // $voiture = $value->get($key);
+        $couleur = $value->getCouleur();
+        $prix = $value->getPrix();
+        $nom = $value->getNom();
+        $id = $value->getId();
+        $image=$id.".jpg";
+
+        echo "<div class=\"annonce\">";
+        echo "<div class=\"image\">";
+        echo "<img src=\"../vue/design/images/$image\" alt=\"$nom\">";
+        echo"</div>";
+        echo "<div class=\"info\">";
+        echo "<p class=\"bold\">";
+        echo $nom;
+        echo "</p>";
+        echo "<p>";
+        echo " Ainsi que son prix : ".$prix;
+        echo "</p>";
+        echo"</div>";
+        echo"</div>";
+        echo"<hr>";
+      }
+    ?>
   </div>
   <footer>
     <p>le pied de page d'un site réalisé par des gens</p>

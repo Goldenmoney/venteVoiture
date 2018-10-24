@@ -12,6 +12,9 @@ class Voiture {
     $this->prix=$prix;
     $this->categorie=$categorie;
   }
+  public function getId(){
+    return $this->identifier;
+  }
   public function getNom(){
     return $this->nom;
   }
@@ -43,6 +46,24 @@ class VoitureDAO {
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
     return $result[0];
+  }
+
+   public function getAll():array{
+    $sql="SELECT * FROM voiture";
+    $sth=$this->dataBase->query($sql);
+    $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
+    return $result;
+  }
+
+  public function getAllCat():array{
+    $sql="SELECT distinct categorie FROM voiture";
+    $sth=$this->dataBase->query($sql);
+    $result=$sth->fetchAll();
+    // $a = array();
+    // foreach ($result as $key => $value) {
+    //   array_push($a, $value);
+    // }
+    return $result;
   }
 }
     $garage = new VoitureDAO();

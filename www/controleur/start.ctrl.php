@@ -1,12 +1,8 @@
 <?php
 require_once("../modele/Voiture.class.php");
-$voiture = new VoitureDAO;
-for ($i=1; $i < 11; $i++) {
-  $voiture = $garage->get($i);
-  $couleur = $voiture->getCouleur();
-  $prix = $voiture->getPrix();
-  $nom = $voiture->getNom();
-}
+$vectVoiture = new VoitureDAO;
+$garage = $vectVoiture->getAll();
+$vectCat = $vectVoiture->getAllCat();
 
 include('../vue/index.php');
 
