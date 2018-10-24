@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <link rel="stylesheet" href="design/style.css">
+  <link rel="stylesheet" href="../vue/design/style.css">
   <meta charset="utf-8">
   <style media="screen">
   form {
@@ -66,7 +66,7 @@
 </head>
 <body>
   <div class="ban">
-    <a href="index.php" class="title">
+    <a href="../controleur/start.ctrl.php" class="title">
       <h1>Vente voiture</h1>
     </a>
     <div class="choix">
@@ -75,7 +75,7 @@
   </div>
   <div class="contenu">
 
-    <form action="/my-handling-form-page" method="post">
+    <form action="../controleur/monCompte.ctrl.php" method="post">
       <div>
         <label for="name">Nom :</label>
         <input type="text" id="name" name="user_name" />
@@ -85,10 +85,11 @@
             <input type="email" id="mail" name="user_email" />
           </div>
 
-          <button type="submit" name="button" class="button">S'inscrire !</button>
+          <button type="submit" name="compte" value="monCompte" class="button">S'inscrire !</button>
         </form>
 
       </div>
+    </div>
     </div>
     <footer>
       <p>le pied de page d'un site réalisé par des gens</p>

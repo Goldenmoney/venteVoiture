@@ -15,17 +15,9 @@
     </div>
   </div>
   <div class="contenu">
-    <?php
-    require_once("../modele/Voiture.class.php");
-    $m = new VoitureDAO;
-    for ($i=1; $i < 11; $i++) {
-      $m = $garage->get($i);
-
-      $couleur=$m->getCouleur();
-      $prix=$m->getPrix();
+    <?php foreach ($variable as $key => $value): ?>
       echo "<div class=\"annonce\">";
       $image=$i.".jpg";
-      $nom = $m->getNom();
       echo "<div class=\"image\">";
       echo "<img src=\"../vue/design/images/$image\" alt=\"$nom\">";
       echo"</div>";
@@ -39,14 +31,13 @@
       echo"</div>";
       echo"</div>";
       echo"<hr>";
-    }
-    ?>
+    <?php endforeach; ?>
   </div>
   <footer>
     <p>le pied de page d'un site réalisé par des gens</p>
   </footer>
   <div class="compte">
-    <a href="../vue/formulaire.php"><p>mon compte</p></a>
+    <a href="../controleur/formulaire.ctrl.php"><p>s'incrire</p></a>
   </div>
 </body>
 </html>
