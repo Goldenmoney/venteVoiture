@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <h1>Vente voiture</h1>
+    <h1>Vente voitures</h1>
     <p></p>
     <div class="cate">
 
