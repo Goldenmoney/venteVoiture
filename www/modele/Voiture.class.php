@@ -42,14 +42,14 @@ class VoitureDAO {
   }
 
   public function get(int $id):Voiture{
-    $sql="SELECT * FROM voiture WHERE identifier=$id";
+    $sql="SELECT * FROM voiture WHERE identifier=$id order by prix";
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
     return $result[0];
   }
 
    public function getAll():array{
-    $sql="SELECT * FROM voiture";
+    $sql="SELECT * FROM voiture order by prix";
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
     return $result;
@@ -65,6 +65,15 @@ class VoitureDAO {
     // }
     return $result;
   }
+
+  public function getFctCat(string $cat):array{
+    var_dump($cat);
+   $sql="SELECT * FROM voiture where categorie=\"$cat\" order by prix";
+   $sth=$this->dataBase->query($sql);
+   $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
+   return $result;
+ }
+
 }
     $garage = new VoitureDAO();
  ?>

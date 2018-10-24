@@ -11,15 +11,16 @@
       <h1>Vente voiture</h1>
     </a>
     <div class="choix">
-    <FORM>
-    <SELECT name="nom" size="1">
-      <OPTION selected>Toutes
+    <FORM action="../controleur/start.ctrl.php">
+    <SELECT name="catChoisie" size="1">
+      <option value="toutes" selected>Toutes
       <?php
         foreach ($vectCat as $key => $value) {
-          echo "<OPTION>".$value[0];
+          echo "<option value=\"$value[0]\">".$value[0];
         }
         ?>
     </SELECT>
+    <button type="submit" class="button">Rechercher</button>
     </FORM>
     </div>
   </div>
