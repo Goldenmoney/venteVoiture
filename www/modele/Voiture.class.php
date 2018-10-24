@@ -67,7 +67,6 @@ class VoitureDAO {
   }
 
   public function getFctCat(string $cat):array{
-    var_dump($cat);
    $sql="SELECT * FROM voiture where categorie=\"$cat\" order by prix";
    $sth=$this->dataBase->query($sql);
    $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");

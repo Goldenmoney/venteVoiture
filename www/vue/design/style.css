@@ -59,6 +59,9 @@ div.ban > div.choix {
   border-right: 1px solid white;
   border-top-right-radius: 5px;
   background-color: rgb(231, 76, 60);
+  display: flex;
+justify-content: center;
+align-items: center;
 }
 
 div.compte {

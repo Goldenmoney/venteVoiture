@@ -55,7 +55,9 @@
     <p>le pied de page d'un site réalisé par des gens</p>
   </footer>
   <div class="compte">
-    <a href="../controleur/formulaire.ctrl.php"><p>s'incrire</p></a>
+    <a href="../controleur/formulaire.ctrl.php"><p>panier</p></a>
+      <a href="../controleur/formulaire.ctrl.php"><p>s'incrire</p></a>
+      <!-- A CHANGER PLUS TARD -->
   </div>
 </body>
 </html>
