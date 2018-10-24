@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(220, 220, 220);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+body * {
+  transition: 0.5s;
+}
+
+div.contenu {
+  min-height: 100px;
+  width: 90%;
+  background-color: white;
+}
+
+div.contenu img {
+  height: 200px;
+}
+
+div.ban{
+  height: 200px;
+  width: 100%;
+  background-color: rgb(192, 57, 43);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: rgb(192, 57, 43);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 10vw;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+div.ban > div.choix {
+  width: 95%;
+  height: 50%;
+  margin-left: 0;
+  margin-right: 5%;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-top-right-radius: 5px;
+  background-color: rgb(231, 76, 60);
+}
+
+div.compte {
+  color: white;
+  background-color: rgb(231, 76, 60);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom-left-radius: 5px;
+}
+
+div.compte:hover {
+  background-color: rgb(210, 30, 30);
+  text-decoration: underline;
+}
+
+div.compte > a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+div.compte >a> p {
+  margin: 10px;
+}
+
+div.annonce {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.annonce:hover {
+  background-color: rgba(200, 200,200, 0.4);
+}
+
+hr {
+  color: grey;
+  width: 90%;
+}
+
+p.bold {
+  font-weight: bold;
+}
+
+a.title {
+  text-decoration: none;
+  color: white;
+}
