@@ -7,10 +7,23 @@
 </head>
 <body>
   <div class="ban">
-    <a href="../controleur/start.ctrl.php" class="title">
-      <h1>Vente voiture</h1>
-    </a>
+    <div class="title">
+      <a href="../controleur/start.ctrl.php" class="title">
+        <h1>Vente voiture</h1>
+      </a>
+    </div>
+
+    <div class="navbar">
+      <div class="panier">
+        <a href="../controleur/monCompte.ctrl.php"><p>panier</p></a>
+      </div>
+      <div class="inscrire">
+        <a href="../controleur/formulaire.ctrl.php"><p>s'incrire</p></a>
+      </div>
+
+    </div>
     <div class="choix">
+      <p class="cat">Categorie :</p>
     <FORM action="../controleur/start.ctrl.php">
     <SELECT name="catChoisie" size="1">
       <option value="toutes" selected>Toutes
@@ -35,17 +48,24 @@
         $image=$id.".jpg";
 
         echo "<div class=\"annonce\">";
-        echo "<div class=\"image\">";
-        echo "<img src=\"../vue/design/images/$image\" alt=\"$nom\">";
-        echo"</div>";
-        echo "<div class=\"info\">";
-        echo "<p class=\"bold\">";
-        echo $nom;
-        echo "</p>";
-        echo "<p>";
-        echo " Ainsi que son prix : ".$prix;
-        echo "</p>";
-        echo"</div>";
+          echo "<div class=\"image\">";
+            echo "<img src=\"../vue/design/images/$image\" alt=\"$nom\">";
+          echo"</div>";
+          echo "<div class=\"info\">";
+            echo "<p class=\"bold\">";
+              echo $nom;
+            echo "</p>";
+            echo "<p>";
+              echo "Prix : ".$prix."€";
+            echo "</p>";
+            echo "<div class=\"ajouter\">";
+              echo "<a>";
+                echo "<p>";
+                  echo "Ajouter";
+                echo "<p>";
+              echo "</a>";
+            echo"</div>";
+          echo"</div>";
         echo"</div>";
         echo"<hr>";
       }
@@ -54,10 +74,5 @@
   <footer>
     <p>le pied de page d'un site réalisé par des gens</p>
   </footer>
-  <div class="compte">
-    <a href="../controleur/formulaire.ctrl.php"><p>panier</p></a>
-      <a href="../controleur/formulaire.ctrl.php"><p>s'incrire</p></a>
-      <!-- A CHANGER PLUS TARD -->
-  </div>
 </body>
 </html>

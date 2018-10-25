@@ -66,9 +66,22 @@
 </head>
 <body>
   <div class="ban">
-    <a href="../controleur/start.ctrl.php" class="title">
-      <h1>Vente voiture</h1>
-    </a>
+    <div class="title">
+      <a href="../controleur/start.ctrl.php" class="title">
+        <h1>Vente voiture</h1>
+      </a>
+    </div>
+
+    <div class="navbar">
+      <div class="panier">
+        <a href="../controleur/monCompte.ctrl.php"><p>panier</p></a>
+      </div>
+      <div class="inscrire">
+        <a href="../controleur/formulaire.ctrl.php"><p>s'incrire</p></a>
+      </div>
+
+    </div>
+
     <div class="choix">
       <p>Bjr form lol</p>
     </div>

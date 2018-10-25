@@ -25,7 +25,11 @@ div.contenu img {
 div.ban{
   height: 200px;
   width: 100%;
-  background-color: rgb(192, 57, 43);
+  /* background-color: rgba(192, 57, 43, 0.4); */
+  background-image: url("../design/images/fond1.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
@@ -33,26 +37,56 @@ div.ban{
 }
 
 footer {
-  height: 200px;
+  min-height: 100px;
   width: 100%;
   background-color: rgb(192, 57, 43);
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
+div.ban > div.navbar {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+div.navbar > div.panier, div.navbar > div.inscrire{
+  height: 50px;
+  width: 120px;
+  background-color: rgb(231, 76, 60);
+  margin-right: 5%;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid white;
+}
+
+div.navbar > div.panier > a, div.navbar > div.inscrire > a{
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+div.navbar > div.panier:hover, div.navbar > div.inscrire:hover {
+  background-color: rgb(200, 30, 30);
+  text-decoration: underline;
+}
+
 h1 {
-  margin-left: 10vw;
-  margin-top: 20px;
-  margin-bottom: 0px;
-  margin-right: 0px;
+  margin: 10px;
+  color: white;
 }
 
 div.ban > div.choix {
   width: 95%;
-  height: 50%;
+  height: 100%;
+  margin-top: 10px;
   margin-left: 0;
   margin-right: 5%;
   border-top: 1px solid white;
@@ -60,35 +94,8 @@ div.ban > div.choix {
   border-top-right-radius: 5px;
   background-color: rgb(231, 76, 60);
   display: flex;
-justify-content: center;
-align-items: center;
-}
-
-div.compte {
-  color: white;
-  background-color: rgb(231, 76, 60);
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
-  border-bottom-left-radius: 5px;
-}
-
-div.compte:hover {
-  background-color: rgb(210, 30, 30);
-  text-decoration: underline;
-}
-
-div.compte > a {
-  width: 100%;
-  height: 100%;
-  color: white;
-  text-decoration: none;
-}
-
-div.compte >a> p {
-  margin: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 div.annonce {
@@ -115,4 +122,59 @@ p.bold {
 a.title {
   text-decoration: none;
   color: white;
+  background-color: rgba(50,50,50,0.5);
+  border-radius: 5px;
+}
+
+a.title:hover {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+}
+
+div.title {
+  padding-left: calc(5vw - 10px);
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  display: flex;
+}
+
+div.ajouter {
+  background-color: rgb(192, 57, 43);
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+}
+
+div.ajouter:hover {
+  margin-left: 20px;
+  background-color: rgb(231, 76, 60);
+}
+
+div.ajouter > a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+button {
+  transition: none;
+}
+
+p.cat {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 801px) {
+  div.annonce {
+    flex-direction: column;
+  }
 }
