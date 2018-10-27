@@ -41,12 +41,8 @@ class VoitureDAO {
 
   }
 
-  public function get(int $id, string $tri):Voiture{
-    if ($tri == "indiferent") {
-      $sql="SELECT * FROM voiture WHERE identifier=$id";
-    } else if ($tri == "prixCroissant") {
-      $sql="SELECT * FROM voiture WHERE identifier=$id order by prix";
-    }
+  public function get(int $id):Voiture{
+    $sql="SELECT * FROM voiture WHERE identifier=$id";
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
     return $result[0];
@@ -67,10 +63,6 @@ class VoitureDAO {
     $sql="SELECT distinct categorie FROM voiture";
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll();
-    // $a = array();
-    // foreach ($result as $key => $value) {
-    //   array_push($a, $value);
-    // }
     return $result;
   }
 
@@ -83,6 +75,13 @@ class VoitureDAO {
    $sth=$this->dataBase->query($sql);
    $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
    return $result;
+ }
+
+ public function getFctNom(string $nom):Voiture{
+   $sql="SELECT * FROM voiture WHERE nom=\"$nom\"";
+   $sth=$this->dataBase->query($sql);
+   $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
+   return $result[0];
  }
 
 }

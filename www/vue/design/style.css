@@ -18,7 +18,7 @@ div.contenu {
   background-color: white;
 }
 
-div.contenu img {
+div.contenu img.showroom {
   height: 200px;
 }
 
@@ -84,14 +84,16 @@ h1 {
 }
 
 div.ban > div.choix {
-  width: 95%;
+  width: 90%;
   height: 100%;
   margin-top: 10px;
-  margin-left: 0;
+  margin-left: 5%;
   margin-right: 5%;
   border-top: 1px solid white;
   border-right: 1px solid white;
+  border-left: 1px solid white;
   border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   background-color: rgb(231, 76, 60);
   display: flex;
   justify-content: center;
@@ -102,12 +104,9 @@ div.annonce {
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
+  background-color: rgba(230, 230, 230, 0.5);
   display: flex;
   justify-content: space-around;
-}
-
-div.annonce:hover {
-  background-color: rgba(200, 200,200, 0.4);
 }
 
 hr {
@@ -146,6 +145,10 @@ div.ajouter {
   height: 50px;
   border-radius: 5px;
   display: flex;
+}
+
+div.ajouter:last-of-type {
+  margin-top: 10px;
 }
 
 div.ajouter:hover {
@@ -188,4 +191,21 @@ div.choix form {
   width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+div.information {
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.information img {
+  max-width: 100%;
+}
+
+div.information h1 {
+  color: black;
 }

@@ -60,32 +60,25 @@
   <div class="contenu">
     <?php
       foreach ($garage as $key => $value){
-        // $voiture = $value->get($key);
-        $couleur = $value->getCouleur();
         $prix = $value->getPrix();
         $nom = $value->getNom();
         $id = $value->getId();
         $image=$id.".jpg";
 
         echo "<div class=\"annonce\">";
-          echo "<div class=\"image\">";
-            echo "<img src=\"../vue/design/images/$image\" alt=\"$nom\">";
-          echo"</div>";
-          echo "<div class=\"info\">";
-            echo "<p class=\"bold\">";
-              echo $nom;
-            echo "</p>";
-            echo "<p>";
-              echo "Prix : ".$prix."€";
-            echo "</p>";
-            echo "<div class=\"ajouter\">";
-              echo "<a>";
-                echo "<p>";
-                  echo "Ajouter";
-                echo "<p>";
-              echo "</a>";
+            echo "<div class=\"image\">";
+              echo "<img src=\"../vue/design/images/$image\" alt=\"$nom\" class=\"showroom\">";
             echo"</div>";
-          echo"</div>";
+            echo "<div class=\"info\">";
+              echo "<p class=\"bold\">".$nom."</p>";
+              echo "<p>Prix : ".$prix."€</p>";
+              echo "<div class=\"ajouter\">";
+                echo "<a href=\"#\"> <p>Ajouter</p> </a>";
+              echo"</div>";
+              echo "<div class=\"ajouter\">";
+                echo "<a href=\"../controleur/info.ctrl.php?info=".$nom."\"> <p>+ d'info</p> </a>";
+              echo"</div>";
+            echo"</div>";
         echo"</div>";
         echo"<hr>";
       }
