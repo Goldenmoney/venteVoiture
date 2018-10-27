@@ -23,15 +23,35 @@
 
     </div>
     <div class="choix">
-      <p class="cat">Categorie :</p>
     <FORM action="../controleur/start.ctrl.php">
+      <p class="cat">Categorie :</p>
     <SELECT name="catChoisie" size="1">
-      <option value="toutes" selected>Toutes
+      <option value="toutes"
+      <?php if (!isset($_GET["catChoisie"]) || $_GET["catChoisie"]=="toutes") {
+        echo "selected";
+      } ?>>Toutes
       <?php
         foreach ($vectCat as $key => $value) {
-          echo "<option value=\"$value[0]\">".$value[0];
+          if ((isset($_GET["catChoisie"])) && ($_GET["catChoisie"] == $value[0])) {
+            echo "<option value=\"$value[0]\" selected>".$value[0];
+          } else {
+            echo "<option value=\"$value[0]\">".$value[0];
+          }
+
         }
         ?>
+    </SELECT>
+    <p class="cat">Trier par :</p>
+    <SELECT name="trie" size="1">
+      <option value="indiferent"
+        <?php if (!isset($_GET["trie"]) || $_GET["trie"]=="indiferent") {
+          echo "selected";
+        } ?>>Indiférent
+      <option value="prixCroissant"
+        <?php if (isset($_GET["trie"]) && $_GET["trie"]=="prixCroissant") {
+          echo "selected";
+        } ?>
+      >Prix croissant
     </SELECT>
     <button type="submit" class="button">Rechercher</button>
     </FORM>

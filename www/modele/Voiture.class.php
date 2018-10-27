@@ -41,15 +41,23 @@ class VoitureDAO {
 
   }
 
-  public function get(int $id):Voiture{
-    $sql="SELECT * FROM voiture WHERE identifier=$id order by prix";
+  public function get(int $id, string $tri):Voiture{
+    if ($tri == "indiferent") {
+      $sql="SELECT * FROM voiture WHERE identifier=$id";
+    } else if ($tri == "prixCroissant") {
+      $sql="SELECT * FROM voiture WHERE identifier=$id order by prix";
+    }
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
     return $result[0];
   }
 
-   public function getAll():array{
-    $sql="SELECT * FROM voiture order by prix";
+   public function getAll(string $tri):array{
+     if ($tri == "indiferent") {
+       $sql="SELECT * FROM voiture";
+     } else if ($tri == "prixCroissant") {
+       $sql="SELECT * FROM voiture order by prix";
+     }
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
     return $result;
@@ -66,8 +74,12 @@ class VoitureDAO {
     return $result;
   }
 
-  public function getFctCat(string $cat):array{
-   $sql="SELECT * FROM voiture where categorie=\"$cat\" order by prix";
+  public function getFctCat(string $cat, string $tri):array{
+    if ($tri == "indiferent") {
+      $sql="SELECT * FROM voiture where categorie=\"$cat\"";
+    } else if ($tri == "prixCroissant") {
+      $sql="SELECT * FROM voiture where categorie=\"$cat\" order by prix";
+    }
    $sth=$this->dataBase->query($sql);
    $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
    return $result;

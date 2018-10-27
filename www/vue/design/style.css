@@ -165,11 +165,15 @@ div.ajouter > a {
 }
 
 button {
+  margin-left: 10px;
   transition: none;
 }
 
 p.cat {
+  margin-left: 10px;
   margin-right: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: bold;
 }
 
@@ -177,4 +181,11 @@ p.cat {
   div.annonce {
     flex-direction: column;
   }
+}
+
+div.choix form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }

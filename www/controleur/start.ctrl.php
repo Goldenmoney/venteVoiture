@@ -3,11 +3,22 @@ require_once("../modele/Voiture.class.php");
 $vectVoiture = new VoitureDAO;
 $vectCat = $vectVoiture->getAllCat();
 
-if(!isset($_GET["catChoisie"]) || $_GET["catChoisie"]=="toutes"){
-  $garage = $vectVoiture->getAll();
+if (isset($_GET["catChoisie"])) {
+  $selectCat = $_GET["catChoisie"];
+} else {
+  $selectCat="toutes";
+}
+
+if (isset($_GET["trie"])) {
+  $selectTrie = $_GET["trie"];
+} else {
+  $selectTrie = "indiferent";
+}
+
+if($selectCat=="toutes"){
+  $garage = $vectVoiture->getAll($selectTrie);
 } else{
-  $cateChoisie =$_GET["catChoisie"];
-  $garage = $vectVoiture->getFctCat($cateChoisie);
+  $garage = $vectVoiture->getFctCat($selectCat, $selectTrie);
 }
 
 include('../vue/index.php');
