@@ -62,6 +62,7 @@
       foreach ($garage as $key => $value){
         $prix = $value->getPrix();
         $nom = $value->getNom();
+        $nomMarque = $value->getNomMarque();
         $id = $value->getId();
         $image=$id.".jpg";
 
@@ -70,7 +71,7 @@
               echo "<img src=\"../vue/design/images/$image\" alt=\"$nom\" class=\"showroom\">";
             echo"</div>";
             echo "<div class=\"info\">";
-              echo "<p class=\"bold\">".$nom."</p>";
+              echo "<p class=\"bold\">".$nomMarque." ".$nom."</p>";
               echo "<p>Prix : ".$prix."€</p>";
               echo "<div class=\"ajouter\">";
                 echo "<a href=\"#\"> <p>Ajouter</p> </a>";

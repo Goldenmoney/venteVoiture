@@ -34,6 +34,7 @@
         <p>Prix : <?php echo $prix; ?></p>
         <p>Categorie : <?php echo $categorie; ?></p>
         <p>Couleur : <?php echo $couleur; ?></p>
+        <p>Pays de la marque : <?php echo $paysMarque; ?></p>
       </div>
     </div>
     <footer>

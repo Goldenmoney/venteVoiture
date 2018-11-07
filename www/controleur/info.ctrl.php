@@ -9,6 +9,8 @@ $nom = $selectVoiture->getNom();
 $couleur = $selectVoiture->getCouleur();
 $categorie = $selectVoiture->getCategorie();
 $id = $selectVoiture->getId();
+$nomMarque = $selectVoiture->getNomMarque();
+$paysMarque = $vectVoiture->getPaysMarque($selectVoiture->getNomMarque());
 
 include('../vue/info.php');
  ?>
