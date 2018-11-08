@@ -14,19 +14,24 @@
     </div>
 
     <div class="navbar">
-      <div class="panier">
-        <a href="../controleur/end.ctrl.php"><p>Déconnexion</p></a>
-      </div>
+      <?php
+      if($_SESSION['niveau'] != 2) {
+        echo "<div class=\"inscrire\">";
+        echo "<a href=\"../controleur/end.ctrl.php\"><p>Déconnexion</p></a>";
+        echo "</div>";
+      }
+       ?>
+       <?php
+       if($_SESSION['niveau'] == 2) {
+         echo "<div class=\"inscrire\">";
+         echo "<a href=\"../controleur/formulaire.ctrl.php\"><p>s'incrire</p></a>";
+         echo "</div>";
+       }
+        ?>
       <div class="panier">
         <a href="../controleur/monCompte.ctrl.php"><p>panier</p></a>
       </div>
-        <?php
-        if($_SESSION['niveau'] == 2) {
-          echo "<div class=\"inscrire\">";
-          echo "<a href=\"../controleur/formulaire.ctrl.php\"><p>s'incrire</p></a>";
-          echo "</div>";
-        }
-         ?>
+
     </div>
     <div class="choix">
     <FORM action="../controleur/start.ctrl.php">
@@ -94,7 +99,7 @@
   <footer>
     <p>le pied de page d'un site réalisé par des gens</p>
     <p>compte de niveau : <?php echo $_SESSION['niveau']; ?></p>
-    <p>compte de login : <?php echo $_SESSION['login']; ?></p> 
+    <p>compte de login : <?php echo $_SESSION['login']; ?></p>
   </footer>
 </body>
 </html>
