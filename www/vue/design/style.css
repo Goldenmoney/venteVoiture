@@ -209,3 +209,7 @@ div.information img {
 div.information h1 {
   color: black;
 }
+
+img.drapeau {
+  height: 200px;
+}

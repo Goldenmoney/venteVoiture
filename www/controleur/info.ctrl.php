@@ -11,6 +11,8 @@ $categorie = $selectVoiture->getCategorie();
 $id = $selectVoiture->getId();
 $nomMarque = $selectVoiture->getNomMarque();
 $paysMarque = $vectVoiture->getPaysMarque($selectVoiture->getNomMarque());
+$paysMarqueImage = $vectVoiture->getPaysMarque($selectVoiture->getNomMarque()).".png";
+$logoMarque = $selectVoiture->getNomMarque().".png";
 
 include('../vue/info.php');
  ?>

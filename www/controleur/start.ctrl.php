@@ -1,4 +1,9 @@
 <?php
+session_start();
+$_SESSION['niveau'] = 0;
+$_SESSION['login'] = "public";
+$_SESSION['age'] = NULL;
+
 require_once("../modele/Voiture.class.php");
 $vectVoiture = new VoitureDAO;
 $vectCat = $vectVoiture->getAllCat();

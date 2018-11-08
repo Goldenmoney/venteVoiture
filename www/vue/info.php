@@ -34,7 +34,9 @@
         <p>Prix : <?php echo $prix; ?></p>
         <p>Categorie : <?php echo $categorie; ?></p>
         <p>Couleur : <?php echo $couleur; ?></p>
+        <img class="drapeau" src="../vue/design/images/<?php echo $logoMarque; ?>" alt="<?php echo $nom; ?>">
         <p>Pays de la marque : <?php echo $paysMarque; ?></p>
+        <img class="drapeau" src="../vue/design/images/<?php echo $paysMarqueImage; ?>" alt="<?php echo $nom; ?>">
       </div>
     </div>
     <footer>

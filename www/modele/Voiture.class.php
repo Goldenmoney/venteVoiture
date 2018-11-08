@@ -64,7 +64,7 @@ class VoitureDAO {
   }
 
   public function getAllCat():array{
-    $sql="SELECT distinct categorie FROM voiture";
+    $sql="SELECT distinct categorie FROM voiture ORDER BY categorie";
     $sth=$this->dataBase->query($sql);
     $result=$sth->fetchAll();
     return $result;
