@@ -88,18 +88,18 @@
   </div>
   <div class="contenu">
 
-    <form action="../controleur/monCompte.ctrl.php" method="post">
+    <form action="../controleur/formulaire.ctrl.php" method="post">
       <div>
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="user_name" />
+        <label for="login">Login :</label>
+        <input type="text" id="login" name="login" />
         <div>
           <div>
-            <label for="mail">E-mail :</label>
-            <input type="email" id="mail" name="user_email" />
+            <label for="niveau">Niveau :</label>
+            <input type="text" id="niveau" name="niveau" />
           </div>
       <div>
-        <label for="mot_de_passe">Mot de passe :</label>
-          <input name="mot_de_passe" type="password" id="mot_de_passe" size="20" />
+        <label for="pass">mot-de-passe :</label>
+          <input name="pass" type="password" id="pass" size="20" />
         </div>
           <button type="submit" name="compte" value="monCompte" class="button">S'inscrire !</button>
         </form>
