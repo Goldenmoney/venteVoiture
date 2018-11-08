@@ -34,8 +34,5 @@
   <footer>
     <p>le pied de page d'un site réalisé par des gens</p>
   </footer>
-  <div class="compte">
-    <a href="../vue/monCompte.php"><p>mon compte</p></a>
-  </div>
 </body>
 </html>

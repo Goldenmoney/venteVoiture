@@ -1,8 +1,12 @@
 <?php
 session_start();
-$_SESSION['niveau'] = 0;
-$_SESSION['login'] = "public";
-$_SESSION['age'] = NULL;
+$_SESSION=array();
+if(!isset($_SESSION['niveau'])){
+  $_SESSION['niveau'] = 2;
+  $_SESSION['login'] = "public";
+  $_SESSION['age'] = NULL;
+}
+
 
 require_once("../modele/Voiture.class.php");
 $vectVoiture = new VoitureDAO;

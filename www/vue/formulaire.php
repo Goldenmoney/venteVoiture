@@ -83,7 +83,7 @@
     </div>
 
     <div class="choix">
-      <p>Bjr form lol</p>
+      <p>Formulaire</p>
     </div>
   </div>
   <div class="contenu">
