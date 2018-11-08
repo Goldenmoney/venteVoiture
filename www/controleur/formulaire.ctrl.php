@@ -10,13 +10,17 @@ if(isset($_POST["compte"])){
   // Insertion
   $login = $_POST['login'];
   $niveau = $_POST['niveau'];
+   //lignes inutiles ???
   $sql = "INSERT INTO utilisateur(login, niveau, pass) VALUES('$login', $niveau, '$pass_hache')";
   var_dump($sql);
+  //lignes inutiles ???
   $req = $bdd->prepare("INSERT INTO utilisateur(login, niveau, pass) VALUES('$login', $niveau, '$pass_hache')");
   var_dump($req);
   $req->execute();
   $_SESSION['niveau'] =  $niveau;
   $_SESSION['login'] = $login;
+  $_SESSION['panier'] = [];
+
   header("Location:../controleur/start.ctrl.php");
   exit;
 

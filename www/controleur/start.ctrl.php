@@ -4,6 +4,7 @@ if(!isset($_SESSION['niveau'])){
   //$_SESSION=array();
   $_SESSION['niveau'] = 2;
   $_SESSION['login'] = "public";
+  $_SESSION['panier'] = [];
 }
 
 

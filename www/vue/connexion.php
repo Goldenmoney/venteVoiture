@@ -88,29 +88,24 @@
   </div>
   <div class="contenu">
 
-    <form action="../controleur/formulaire.ctrl.php" method="post">
+    <form action="../controleur/connexion.ctrl.php" method="post">
       <div>
         <label for="login">Login :</label>
         <input type="text" id="login" name="login" />
         <div>
-          <div>
-            <label for="niveau">Niveau :</label>
-            <input type="text" id="niveau" name="niveau" />
-          </div>
-          <div>
-            <label for="pass">mot-de-passe :</label>
-            <input name="pass" type="password" id="pass" size="20" />
-          </div>
-          <button type="submit" name="compte" value="monCompte" class="button">S'inscrire !</button>
+
+        <label for="pass">mot-de-passe :</label>
+          <input name="pass" type="password" id="pass" size="20" />
+        </div>
+          <button type="submit" name="connexion" value="monCompte" class="button">Se connecter !</button>
+        </form>
 
       </div>
     </div>
-  </form>
+    </div>
+    <footer>
+      <p>le pied de page d'un site réalisé par des gens</p>
+    </footer>
 
-  </div>
-  <footer>
-    <p>le pied de page d'un site réalisé par des gens</p>
-  </footer>
-
-</body>
-</html>
+  </body>
+  </html>
