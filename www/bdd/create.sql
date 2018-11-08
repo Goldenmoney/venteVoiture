@@ -22,7 +22,7 @@ CREATE TABLE voiture
 
 CREATE TABLE utilisateur
 (
-  login INTEGER PRIMARY KEY,
-  niveau TEXT,
+  login TEXT PRIMARY KEY,
+  niveau INTEGER,
   pass TEXT
 );

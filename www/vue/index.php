@@ -14,6 +14,10 @@
     </div>
 
     <div class="navbar">
+      <div class="infoCompte">
+        <p>login : <?php echo $_SESSION['login']; ?></p>
+        <p>niveau de droit : <?php echo $_SESSION['niveau']; ?></p>
+      </div>
       <?php
       if($_SESSION['niveau'] != 2) {
         echo "<div class=\"inscrire\">";
@@ -84,9 +88,11 @@
             echo "<div class=\"info\">";
               echo "<p class=\"bold\">".$nomMarque." ".$nom."</p>";
               echo "<p>Prix : ".$prix."€</p>";
-              echo "<div class=\"ajouter\">";
-                echo "<a href=\"#\"> <p>Ajouter</p> </a>";
-              echo"</div>";
+              if($_SESSION['niveau'] != 2) {
+                echo "<div class=\"ajouter\">";
+                  echo "<a href=\"#\"> <p>Ajouter</p> </a>";
+                echo"</div>";
+              }
               echo "<div class=\"ajouter\">";
                 echo "<a href=\"../controleur/info.ctrl.php?info=".$nom."\"> <p>+ d'info</p> </a>";
               echo"</div>";
@@ -98,8 +104,6 @@
   </div>
   <footer>
     <p>le pied de page d'un site réalisé par des gens</p>
-    <p>compte de niveau : <?php echo $_SESSION['niveau']; ?></p>
-    <p>compte de login : <?php echo $_SESSION['login']; ?></p>
   </footer>
 </body>
 </html>

@@ -213,3 +213,23 @@ div.information h1 {
 img.drapeau {
   height: 200px;
 }
+
+div.infoCompte{
+  height: 50px;
+  background-color: rgb(231, 76, 60);
+  margin-right: 5%;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.infoCompte> p{
+  margin: 15px;
+}
+
+div.infoCompte> p:first-of-type{
+  padding-right: 25px;
+}

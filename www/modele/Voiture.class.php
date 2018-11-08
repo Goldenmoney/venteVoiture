@@ -45,6 +45,10 @@ class VoitureDAO {
 
   }
 
+  public function getDB() {
+    return $this->dataBase;
+  }
+
   public function get(int $id):Voiture{
     $sql="SELECT * FROM voiture WHERE identifier=$id";
     $sth=$this->dataBase->query($sql);
