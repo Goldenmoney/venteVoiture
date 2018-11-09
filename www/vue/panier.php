@@ -36,7 +36,7 @@
           $nom = $selectVoiture->getNom();
           //$prix = $selectVoiture->getPrix();
           //$id = $selectVoiture->getId();
-          echo "<p>Prix : ".$nom."</p>";
+          echo "<p>Nom voiture : ".$nom."</p>";
         }
          ?>
         <!-- <h1><?php //echo $nom; ?></h1>

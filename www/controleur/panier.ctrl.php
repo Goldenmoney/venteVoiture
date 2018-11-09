@@ -23,7 +23,7 @@ if(isset($_GET['add'])) {
   } else if ($_GET['add'] == 'false'){ //cas où on a appler ce ctrl pour afficher le panier
     $login = $_SESSION['login'];
     $arrayPanier = $vectVoiture->getIdFctLogin($login);
-    var_dump($arrayPanier);
+    //var_dump($arrayPanier);
     include('../vue/panier.php');
   } else {
     //erreur
