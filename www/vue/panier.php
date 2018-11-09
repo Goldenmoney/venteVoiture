@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="../vue/design/style.css">
     <meta charset="utf-8">
-    <title>information <?php echo $nom; ?></title>
+    <title>Votre Panier</title>
   </head>
   <body id="panier">
     <div class="ban">
