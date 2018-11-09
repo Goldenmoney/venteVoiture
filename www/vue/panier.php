@@ -28,7 +28,11 @@
       </div>
     </div>
     <div class="contenu">
-      <div class="monPanier">
+      <div class="information">
+
+        <h1><?php echo $nom; ?></h1>
+        <img src="../vue/design/images/<?php echo $id; ?>.jpg" alt="<?php echo $nom; ?>">
+        <p>Prix : <?php echo $prix; ?></p>
 
       </div>
     </div>
