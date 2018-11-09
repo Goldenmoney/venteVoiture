@@ -45,9 +45,12 @@
           $value = $value[0];
           $selectVoiture = $vectVoiture->getFctId($value);
           $nom = $selectVoiture->getNom();
+          $nomMarque = $selectVoiture->getNomMarque();
           //$prix = $selectVoiture->getPrix();
           //$id = $selectVoiture->getId();
-          echo "<p>Nom voiture : ".$nom."</p>";
+          echo "<p> ".$nomMarque." : ".$nom."</p>";
+          echo "<img src=\"../vue/design/images/".$value.".jpg\" alt=\"".$nom."\">";
+          echo"<hr>";
         }
          ?>
         <!-- <h1><?php //echo $nom; ?></h1>

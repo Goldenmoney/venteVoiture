@@ -14,9 +14,9 @@
     </div>
 
     <div class="navbar">
-      <div class="panier">
+      <!-- <div class="panier">
         <a href="../controleur/monCompte.ctrl.php"><p>panier</p></a>
-      </div>
+      </div> -->
       <div class="inscrire">
         <a href="../controleur/formulaire.ctrl.php"><p>s'incrire</p></a>
       </div>

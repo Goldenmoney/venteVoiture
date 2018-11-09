@@ -17,10 +17,8 @@ if(isset($_GET['add'])) {
       $req = $bdd->prepare("INSERT INTO panier(login, idVoiture) VALUES('$login', $idVoiture)");
       $req->execute();
 
-      require_once("../modele/Voiture.class.php");
-      $vectVoiture = new VoitureDAO;
-
-      $selectVoiture = $vectVoiture->getFctNom($_GET["info"]);
+      $selectVoiture = $vectVoiture->get($_GET['id']);
+      // ????????????????????????????
       $nom = $selectVoiture->getNom();
       $prix = $selectVoiture->getPrix();
       $nom = $selectVoiture->getNom();
@@ -34,7 +32,6 @@ if(isset($_GET['add'])) {
   } else if ($_GET['add'] == 'false'){ //cas où on a appler ce ctrl pour afficher le panier
     $login = $_SESSION['login'];
     $arrayPanier = $vectVoiture->getIdFctLogin($login);
-    //var_dump($arrayPanier);
     include('../vue/panier.php');
   } else {
     //erreur
