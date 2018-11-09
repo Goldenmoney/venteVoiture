@@ -14,12 +14,23 @@
       </div>
 
       <div class="navbar">
-        <div class="panier">
-          <a href="../controleur/monCompte.ctrl.php"><p>panier</p></a>
-        </div>
-        <div class="inscrire">
-          <a href="../controleur/formulaire.ctrl.php"><p>s'incrire</p></a>
-        </div>
+        <?php
+        if($_SESSION['niveau'] != 2) {
+          echo "<div class=\"inscrire\">";
+          echo "<a href=\"../controleur/end.ctrl.php\"><p>Déconnexion</p></a>";
+          echo "</div>";
+        }
+         ?>
+         <?php
+         if($_SESSION['niveau'] == 2) {
+           echo "<div class=\"inscrire\">";
+           echo "<a href=\"../controleur/formulaire.ctrl.php\"><p>s'incrire</p></a>";
+           echo "</div>";
+           echo "<div class=\"inscrire\">";
+           echo "<a href=\"../controleur/connexion.ctrl.php\"><p>se connecter</p></a>";
+           echo "</div>";
+         }
+          ?>
 
       </div>
 

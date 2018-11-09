@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("../modele/Voiture.class.php");
 $vectVoiture = new VoitureDAO;
 
