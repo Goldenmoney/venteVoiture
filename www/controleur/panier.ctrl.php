@@ -16,6 +16,17 @@ if(isset($_GET['add'])) {
       $idVoiture = $_GET['id'];
       $req = $bdd->prepare("INSERT INTO panier(login, idVoiture) VALUES('$login', $idVoiture)");
       $req->execute();
+
+      require_once("../modele/Voiture.class.php");
+      $vectVoiture = new VoitureDAO;
+
+      $selectVoiture = $vectVoiture->getFctNom($_GET["info"]);
+      $nom = $selectVoiture->getNom();
+      $prix = $selectVoiture->getPrix();
+      $nom = $selectVoiture->getNom();
+      $couleur = $selectVoiture->getCouleur();
+      $categorie = $selectVoiture->getCategorie();
+
       //array_push($_SESSION['panier'], $_GET['nom']);
       header("Location:../controleur/start.ctrl.php");
       exit;

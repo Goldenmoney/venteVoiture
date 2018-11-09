@@ -19,6 +19,9 @@
           echo "<div class=\"inscrire\">";
           echo "<a href=\"../controleur/end.ctrl.php\"><p>Déconnexion</p></a>";
           echo "</div>";
+          echo "<div class=\"panier\">
+            <a href=\"../controleur/panier.ctrl.php?add=false\"><p>panier</p></a>
+          </div>\"";
         }
          ?>
          <?php
