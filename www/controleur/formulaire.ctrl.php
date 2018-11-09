@@ -10,8 +10,6 @@ if(isset($_POST["compte"])){
   // Insertion
   $login = $_POST['login'];
   $niveau = $_POST['niveau'];
-   //lignes inutiles ???
-   
   $req = $bdd->prepare("INSERT INTO utilisateur(login, niveau, pass) VALUES('$login', $niveau, '$pass_hache')");
   $req->execute();
   $_SESSION['niveau'] =  $niveau;

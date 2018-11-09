@@ -17,14 +17,6 @@ if(isset($_GET['add'])) {
       $req = $bdd->prepare("INSERT INTO panier(login, idVoiture) VALUES('$login', $idVoiture)");
       $req->execute();
 
-      $selectVoiture = $vectVoiture->get($_GET['id']);
-      // ????????????????????????????
-      $nom = $selectVoiture->getNom();
-      $prix = $selectVoiture->getPrix();
-      $nom = $selectVoiture->getNom();
-      $couleur = $selectVoiture->getCouleur();
-      $categorie = $selectVoiture->getCategorie();
-
       //array_push($_SESSION['panier'], $_GET['nom']);
       header("Location:../controleur/start.ctrl.php");
       exit;

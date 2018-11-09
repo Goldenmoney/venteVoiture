@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>information <?php echo $nom; ?></title>
   </head>
-  <body>
+  <body id="panier">
     <div class="ban">
       <div class="title">
         <a href="../controleur/start.ctrl.php" class="title">
@@ -48,14 +48,21 @@
           $nomMarque = $selectVoiture->getNomMarque();
           //$prix = $selectVoiture->getPrix();
           //$id = $selectVoiture->getId();
-          echo "<p> ".$nomMarque." : ".$nom."</p>";
+          echo "<div class=\"annonce\">";
+          echo "<div class=\"left\">";
           echo "<img src=\"../vue/design/images/".$value.".jpg\" alt=\"".$nom."\">";
+          echo "</div>";
+          echo "<div class=\"right\">";
+          echo "<p> ".$nomMarque." : ".$nom."</p>";
+          echo "</div>";
+          echo "<div>";
+          echo "<a href=\"#\">supprimer</a>";
+          echo "</div>";
+          echo "</div>";
+
           echo"<hr>";
         }
          ?>
-        <!-- <h1><?php //echo $nom; ?></h1>
-        <img src="../vue/design/images/<?php// echo $id; ?>.jpg" alt="<?php //echo $nom; ?>">
-        <p>Prix : <?php //echo $prix; ?></p> -->
 
       </div>
     </div>

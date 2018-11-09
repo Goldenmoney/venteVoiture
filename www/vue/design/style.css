@@ -275,3 +275,11 @@ div.infoCompte> p:first-of-type{
 #form button {
   margin-left: .5em;
 }
+
+#panier img {
+  height: 200px;
+}
+
+#panier .annonce {
+  width: 90%;
+}
