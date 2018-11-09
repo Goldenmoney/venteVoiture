@@ -36,7 +36,7 @@
        }
         ?>
       <div class="panier">
-        <a href="../controleur/panier.ctrl.php"><p>panier</p></a>
+        <a href="../controleur/panier.ctrl.php?add=false"><p>panier</p></a>
       </div>
 
     </div>
@@ -93,8 +93,7 @@
               echo "<p>Prix : ".$prix."€</p>";
               if($_SESSION['niveau'] != 2) {
                 echo "<div class=\"ajouter\">";
-                  echo "<a href=\"../controleur/panier.ctrl.php?nom=".$nom."\"> <p>Ajouter</p> </a>";
-
+                  echo "<a href=\"../controleur/panier.ctrl.php?id=".$id."&add=true\"> <p>Ajouter</p> </a>";
                 echo"</div>";
               }
               echo "<div class=\"ajouter\">";

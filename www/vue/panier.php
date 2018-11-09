@@ -29,10 +29,19 @@
     </div>
     <div class="contenu">
       <div class="information">
-
-        <h1><?php echo $nom; ?></h1>
-        <img src="../vue/design/images/<?php echo $id; ?>.jpg" alt="<?php echo $nom; ?>">
-        <p>Prix : <?php echo $prix; ?></p>
+        <?php
+        foreach ($arrayPanier as $key => $value) {
+          $value = $value[0];
+          $selectVoiture = $vectVoiture->getFctId($value);
+          $nom = $selectVoiture->getNom();
+          //$prix = $selectVoiture->getPrix();
+          //$id = $selectVoiture->getId();
+          echo "<p>Prix : ".$nom."</p>";
+        }
+         ?>
+        <!-- <h1><?php //echo $nom; ?></h1>
+        <img src="../vue/design/images/<?php// echo $id; ?>.jpg" alt="<?php //echo $nom; ?>">
+        <p>Prix : <?php //echo $prix; ?></p> -->
 
       </div>
     </div>

@@ -42,7 +42,6 @@ class VoitureDAO {
     } catch (PDOException $e) {
       die("erreur de connexion :".$e->getMessage());
     }
-
   }
 
   public function getDB() {
@@ -92,6 +91,13 @@ class VoitureDAO {
    return $result[0];
  }
 
+ public function getFctId(int $id):Voiture{
+   $sql="SELECT * FROM voiture WHERE identifier=$id";
+   $sth=$this->dataBase->query($sql);
+   $result=$sth->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Voiture");
+   return $result[0];
+ }
+
  public function getPaysMarque(string $nom): string{
    $sql="SELECT marque.pays
    FROM voiture, marque
@@ -100,6 +106,13 @@ class VoitureDAO {
    $sth=$this->dataBase->query($sql);
    $result=$sth->fetchAll();
    return $result[0][0];
+ }
+
+ public function getIdFctLogin(string $login):array{
+   $sql="SELECT distinct idVoiture FROM panier WHERE login=\"$login\"";
+   $sth=$this->dataBase->query($sql);
+   $result=$sth->fetchAll();
+   return $result;
  }
 
 }
